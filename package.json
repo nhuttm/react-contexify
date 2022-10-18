@@ -14,10 +14,9 @@
   "scripts": {
     "start": "tsdx watch",
     "start:example": "cd example && yarn start",
-    "build": "yarn run prepare",
+    "build": "tsdx build && yarn run style",
     "test": "cypress run",
     "lint": "tsdx lint",
-    "prepare": "tsdx build && yarn run style",
     "cypress:open": "cypress open",
     "sass": "sass scss/main.scss dist/ReactContexify.css",
     "postsass": "postcss dist/ReactContexify.css --use autoprefixer -m -o dist/ReactContexify.css",
